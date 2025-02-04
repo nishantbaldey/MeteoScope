@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-input">
+        <h1 class="logo-text">MeteoScope</h1>
+        <div class="input-group">
+          <div class="searchit">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search for place"
+            />
+            <button class="toggle-unit">°C/°F</button>
+          </div>
+          <br />
+          <div class="search">
+            <button class="current">Current Location</button>
+            <button class="searching">Search</button>
+          </div>
+        </div>
+        <hr />
+        <div class="data">
+          <div class="weather-left">
+            <div class="card">
+              <div class="current-weather">
+                <div class="details">
+                  <h2>Now</h2>
+                  <h2 class="temp">__°C</h2>
+                  <p class="condition">____</p>
+                  <span class="city"
+                    ><i class="fas fa-map-marker-alt" aria-label="Location"></i
+                    >Location</span
+                  >
+                </div>
+                <div class="weather-icon">
+                  <img
+                    src="https://openweathermap.org/img/wn/04d@2x.png"
+                    alt="Weather Icon"
+                  />
+                </div>
+              </div>
+              <div class="card-footer">
+                <p>
+                  <i class="fas fa-calendar-alt" aria-label="Date"></i
+                  ><span class="date">___________</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <h2>Today's Highlight</h2>
+        <div class="weadata">
+          <div class="detail-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              xml:space="preserve"
+              style="
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 2;
+              "
+              width="50"
+              height="50"
+            >
+              <path
+                d="M29.85 17.399a2.838 2.838 0 0 1 4.323-.016C37.872 21.766 45 31.619 45 42.484c0 7.175-5.825 13-13 13s-13-5.825-13-13c0-10.681 7.157-20.651 10.85-25.085z"
+                style="fill: white; stroke: white; stroke-width: 1.5px"
+              />
+              <path
+                d="M41 42.234a9.954 9.954 0 0 1-5.451 8.876M14 38.152c-4.038-1.146-7-4.863-7-9.266 0-8.177 5.663-15.792 8.303-18.898a1.78 1.78 0 0 1 2.653-.016c2.048 2.362 5.891 7.397 7.53 13.408M38.549 23.325c1.663-5.92 5.478-10.966 7.503-13.346a1.79 1.79 0 0 1 2.664-.01C51.354 13.043 57 20.563 57 28.886c0 4.403-2.962 8.12-7 9.266"
+                style="fill: white; stroke: white; stroke-width: 1.5px"
+              />
+            </svg>
+
+            <p>Humidity</p>
+            <p><span class="humidity">__</span></p>
+          </div>
+          <div class="detail-box">
+            <svg
+              version="1.1"
+              id="industries_x5F_icons_1_"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0"
+              y="0"
+              viewBox="0 0 128 128"
+              style="enable-background: new 0 0 128 128"
+              xml:space="preserve"
+              width="50"
+              height="50"
+            >
+              <style>
+                .st0 {
+                  display: none;
+                }
+                .st1 {
+                  display: inline;
+                }
+                .st2,
+                .st3 {
+                  fill: white;
+                }
+                .st3 {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                }
+                .st5 {
+                  font-size: 39.8222px;
+                }
+                .st6 {
+                  display: inline;
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  fill: white;
+                }
+              </style>
+              <g id="_x32__19_">
+                <g id="car_x5F_manufacture_1_">
+                  <path
+                    class="st2"
+                    d="m28.9 43.6 9.5 5.5 1.8-3.2-9.5-5.5-1.8 3.2zm23.6-7L47 27.1l-3.2 1.8 5.5 9.5 3.2-1.8zm35-5.8L84.3 29l-5.5 9.5 3.2 1.8 5.5-9.5zm-19.8-7.2H64v10.9h3.7V23.6zM23.6 63.7h11V60h-11v3.7zm69.8 0v3.6h11v-3.6h-11zM64 13.5c-27.9 0-50.5 22.6-50.5 50.5s22.6 50.5 50.5 50.5 50.5-22.6 50.5-50.5S91.9 13.5 64 13.5zm0 97.1c-25.8 0-46.6-20.9-46.6-46.6 0-25.8 20.9-46.6 46.6-46.6 25.8 0 46.6 20.9 46.6 46.6 0 25.8-20.8 46.6-46.6 46.6zm35-66.9-9.5 5.5 1.8 3.2 9.5-5.5-1.8-3.2zM84.2 94.3h-6.7v-6.7h-3.4v6.7h-6.7v-6.7H64v6.7h-6.7v-6.7h-3.4v6.7h-6.7v-6.7h-3.4v10.1h43.8V87.6h-3.4v6.7z"
+                    id="_x32__6_"
+                  />
+                  <path
+                    class="st2"
+                    d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm0 121.3C32.3 121.3 6.7 95.7 6.7 64 6.7 32.3 32.3 6.7 64 6.7c31.7 0 57.3 25.7 57.3 57.3 0 31.7-25.6 57.3-57.3 57.3zm12-79.4-9.6 15.6c-.8-.2-1.5-.3-2.4-.3-5.6 0-10.1 4.5-10.1 10.1 0 2.5.9 4.8 2.4 6.5L53 79.2l5.7 3.5 3.3-5.4c.6.1 1.3.2 1.9.2C69.5 77.5 74 73 74 67.4c0-2.3-.8-4.4-2.1-6.2l9.7-15.8-5.6-3.5z"
+                    id="_x31__6_"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            <p>Pressure</p>
+            <p><span class="pressure">__</span></p>
+          </div>
+          <div class="detail-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.83 11.442C21.653 11.179 17.441 5 12 5s-9.653 6.179-9.83 6.442L1.8 12l.374.558C2.347 12.821 6.559 19 12 19s9.653-6.179 9.83-6.442L22.2 12zM12 17c-3.531 0-6.664-3.59-7.758-5C5.336 10.59 8.469 7 12 7s6.664 3.59 7.758 5c-1.094 1.41-4.227 5-7.758 5z"
+                fill="white"
+              />
+              <path
+                d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"
+                fill="white"
+              />
+            </svg>
+
+            <p>Visibility</p>
+            <p><span class="visibility">__</span>km</p>
+          </div>
+          <div class="detail-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              width="50"
+              height="50"
+            >
+              <defs>
+                <style>
+                  .cls-2 {
+                    fill: #cecece;
+                  }
+                  .cls-3 {
+                    fill: none;
+                    stroke: #000;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 2px;
+                  }
+                  .cls-6 {
+                    mix-blend-mode: overlay;
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g style="isolation: isolate">
+                <g id="Layer_1" data-name="Layer 1">
+                  <g id="Vector">
+                    <path
+                      class="cls-2"
+                      d="M53.94 56.11c-2.6 0-4.89-.67-6.37-3.06-.5-.81-.63-1.56.11-2.24s1.5-1.29 2.57-.64a12.05 12.05 0 0 1 1.21.8c1.49 1.17 3 1.34 4.49.05 1.17-1 2-2.28 1.36-3.81a4 4 0 0 0-4-2.75H38.58c-1.55 0-3-.37-3-2.08s1.35-2.16 2.92-2.15h15.56c4.45 0 7.62 3.5 7.58 8.11a7.57 7.57 0 0 1-7.7 7.77zM53.94 7.89c-2.6 0-4.89.67-6.37 3.06-.5.81-.63 1.56.11 2.24s1.5 1.29 2.57.64a12.05 12.05 0 0 0 1.21-.8c1.49-1.17 3-1.34 4.49 0 1.17 1 2 2.28 1.36 3.81a4 4 0 0 1-4 2.75c-4.91-.05-9.82 0-14.73 0-1.55 0-3 .37-3 2.08s1.35 2.16 2.92 2.15h15.56c4.45 0 7.62-3.5 7.58-8.11a7.57 7.57 0 0 0-7.7-7.82z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p>Wind Speed</p>
+            <p><span class="wind">__</span>km/hr</p>
+          </div>
+          <div class="detail-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 128 128"
+              width="50"
+              height="50"
+              style="enable-background: new 0 0 128 128"
+              xml:space="preserve"
+            >
+              <circle
+                style="fill: #f78e61"
+                cx="62.265"
+                cy="91.408"
+                r="23.015"
+              />
+              <path
+                style="fill: #ffffff"
+                d="M63.725 67.007V15.829a1.46 1.46 0 0 0-2.92 0v51.178C47.99 67.769 37.79 78.405 37.79 91.408c0 13.495 10.979 24.475 24.474 24.475 13.496 0 24.475-10.979 24.475-24.475.001-13.003-10.199-23.639-23.014-24.401zm-1.46 45.955c-11.885 0-21.554-9.669-21.554-21.554s9.669-21.554 21.554-21.554S83.82 79.522 83.82 91.408s-9.67 21.554-21.555 21.554zm17.533-53.64V17.533C79.798 7.865 71.933 0 62.265 0S44.731 7.865 44.731 17.533v41.79C32.94 65.761 25.673 77.932 25.673 91.408c0 20.177 16.415 36.592 36.592 36.592 20.178 0 36.593-16.415 36.593-36.592 0-13.476-7.269-25.647-19.06-32.086zM62.265 123.62c-17.761 0-32.212-14.451-32.212-32.212 0-12.261 6.839-23.296 17.848-28.799l1.211-.605v-44.47c0-7.253 5.9-13.153 13.153-13.153s13.153 5.9 13.153 13.153v44.469l1.211.605c11.01 5.504 17.849 16.54 17.849 28.8-.001 17.761-14.451 32.212-32.213 32.212zM83.82 23.784c0-.806.654-1.46 1.46-1.46h15.588a1.46 1.46 0 0 1 0 2.92H85.28a1.459 1.459 0 0 1-1.46-1.46zm18.507 8.524a1.46 1.46 0 0 1-1.46 1.46H85.28a1.46 1.46 0 0 1 0-2.92h15.588a1.46 1.46 0 0 1 1.459 1.46zm0 17.048a1.46 1.46 0 0 1-1.46 1.46H85.28a1.46 1.46 0 0 1 0-2.92h15.588a1.46 1.46 0 0 1 1.459 1.46zm0-8.524a1.46 1.46 0 0 1-1.46 1.46H85.28a1.46 1.46 0 0 1 0-2.92h15.588a1.46 1.46 0 0 1 1.459 1.46z"
+              />
+            </svg>
+
+            <p>Feels Like</p>
+            <p><span class="feels-like">__</span></p>
+          </div>
+          <div class="detail-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 6.827 6.827"
+              width="50"
+              height="50"
+              style="
+                shape-rendering: geometricPrecision;
+                text-rendering: geometricPrecision;
+                image-rendering: optimizeQuality;
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+              "
+            >
+              <defs>
+                <style>
+                  .str0 {
+                    stroke: #ffffff;
+                    stroke-width: 0.213335;
+                  }
+                  .fil1 {
+                    fill: none;
+                  }
+                  .fil0 {
+                    fill: #ffffff;
+                    fill-rule: nonzero;
+                  }
+                </style>
+              </defs>
+              <g id="Layer_x0020_1">
+                <g id="_435216304">
+                  <path
+                    id="_435216976"
+                    class="fil0"
+                    d="M5.173 2.424c.08.021.156.05.228.089a.857.857 0 0 1 .465.794.864.864 0 0 1-.586.792c-.126.046-.26.066-.393.066H2.99c-.137 0-.274-.021-.402-.069a.9.9 0 0 1-.322-.204.858.858 0 0 1-.255-.617.877.877 0 0 1 .255-.616.9.9 0 0 1 .322-.204c.128-.048.265-.07.402-.07h.117a.994.994 0 0 1 .102-.352.92.92 0 0 1 .299-.34c.09-.063.19-.11.295-.141a1.165 1.165 0 0 1 .668 0c.106.03.207.078.298.141a.918.918 0 0 1 .303.349c.059.118.091.247.1.382zm.132.268a.868.868 0 0 0-.25-.085l-.083-.016v-.085a.83.83 0 0 0-.082-.374.715.715 0 0 0-.236-.27.843.843 0 0 0-.24-.115.962.962 0 0 0-.552 0 .845.845 0 0 0-.237.114.717.717 0 0 0-.234.265.82.82 0 0 0-.085.363l-.002.101h-.313a.947.947 0 0 0-.33.056.696.696 0 0 0-.25.158.654.654 0 0 0-.195.471.674.674 0 0 0 .194.472.696.696 0 0 0 .25.158.947.947 0 0 0 .33.056h1.897a.951.951 0 0 0 .323-.053.707.707 0 0 0 .248-.152.654.654 0 0 0 .165-.702.652.652 0 0 0-.318-.362z"
+                  />
+                  <path
+                    id="_435217240"
+                    class="fil0"
+                    d="M1.827 1.986h.224c.009-.423.247-.696.55-.817a1.012 1.012 0 0 1 .748 0c.152.06.288.16.386.298a1.164 1.164 0 0 0-.193.085.666.666 0 0 0-.27-.194.806.806 0 0 0-.596 0c-.236.095-.421.312-.421.653a.79.79 0 0 0 .003.068l.01.112h-.442c-.32 0-.524.148-.611.339a.561.561 0 0 0 0 .468c.087.19.29.339.612.339h.085c.004.069.016.138.035.204h-.12c-.413 0-.68-.201-.797-.459a.765.765 0 0 1 0-.637c.118-.257.384-.459.797-.459z"
+                  />
+                  <path
+                    id="_435217408"
+                    class="fil1 str0"
+                    d="M2.364 4.347c-.55.863.698.75 0 0z"
+                  />
+                  <path
+                    id="_435215944"
+                    class="fil1 str0"
+                    d="M5.45 5.227c-.378.759.639.557 0 0z"
+                  />
+                  <path
+                    id="_435216544"
+                    class="fil1 str0"
+                    d="M3.465 4.368c-.617.818.636.803 0 0z"
+                  />
+                  <path
+                    id="_435216256"
+                    class="fil1 str0"
+                    d="M2.95 5.121c-.641.8.612.82 0 0z"
+                  />
+                  <path
+                    id="_435216496"
+                    class="fil1 str0"
+                    d="M4.714 4.367c-.53.877.716.733 0 0z"
+                  />
+                  <path
+                    id="_435216472"
+                    class="fil1 str0"
+                    d="M4.015 5.12c-.529.877.716.733 0 0z"
+                  />
+                </g>
+              </g>
+              <path class="fil1" d="M0 0h6.827v6.827H0z" />
+            </svg>
+
+            <p>Precipitation</p>
+            <p><span class="prep">__</span> mm</p>
+          </div>
+        </div>
+
+        <h2 class="next">Next 5 Days Forecast</h2>
+        <div class="nextweek">
+          <!-- Forecast items will be populated by JavaScript -->
+          <div class="forecast-item">
+            <div class="icon-wrapper">
+              <img src="" alt="" class="forecast-icon" />
+              <span class="forecast-temp">__°C</span>
+            </div>
+            <p class="forecast-day">Day</p>
+            <p class="forecast-condition">Condition</p>
+          </div>
+          <div class="forecast-item">
+            <div class="icon-wrapper">
+              <img src="" alt="" class="forecast-icon" />
+              <span class="forecast-temp">__°C</span>
+            </div>
+            <p class="forecast-day">Day</p>
+            <p class="forecast-condition">Condition</p>
+          </div>
+          <div class="forecast-item">
+            <div class="icon-wrapper">
+              <img src="" alt="" class="forecast-icon" />
+              <span class="forecast-temp">__°C</span>
+            </div>
+            <p class="forecast-day">Day</p>
+            <p class="forecast-condition">Condition</p>
+          </div>
+          <div class="forecast-item">
+            <div class="icon-wrapper">
+              <img src="" alt="" class="forecast-icon" />
+              <span class="forecast-temp">__°C</span>
+            </div>
+            <p class="forecast-day">Day</p>
+            <p class="forecast-condition">Condition</p>
+          </div>
+          <div class="forecast-item">
+            <div class="icon-wrapper">
+              <img src="" alt="" class="forecast-icon" />
+              <span class="forecast-temp">__°C</span>
+            </div>
+            <p class="forecast-day">Day</p>
+            <p class="forecast-condition">Condition</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
